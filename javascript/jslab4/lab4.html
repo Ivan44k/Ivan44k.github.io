@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function showBook(book){return `Name: ${book.title}\nPrice: ${book.price}`}
+function isEmpty(obj){return Object.keys(obj).length === 0}
+function getSecondsToday(){return (new Date() - new Date().setHours(0, 0, 0, 0))/1000}
+function formatDate(date){return String(date.getDate()).padStart(2, '0')+'.'+String(date.getMonth()+1).padStart(2, '0')+'.'+String(date.getFullYear()%100).padStart(2, '0')}
+
+var book1 = {
+    title: "The Little Prince",
+    pubYear: 1943,
+    price: 400,
+
+    show(){return `Name: ${this.title}\nPrice: ${this.price}`}
+}
+
+
+class Book2{
+    constructor(){
+        this.title = "The Master and Margarita "
+        this.pubYear = 2018
+        this.price = 300
+    }
+
+    show(){return showBook(this)}
+}
+
+
+let obj = {
+	className: 'open menu',
+    addClass(cls){
+        let classes = this.className.split(" ")
+        if (!(classes.includes(cls))){
+            classes.push(cls)
+            this.className=classes.join(" ")
+            return this
+        }
+        return this
+    },
+
+    removeClass(cls){
+        let classes = this.className.split(" ")
+        if (classes.includes(cls)){
+            classes.splice(classes.indexOf(cls), 1)
+            this.className=classes.join(" ")
+            return this
+        }
+        return this
+    }
+}
+
+
+let dima = { name: "Дима", age: 22 }
+let sveta = { name: "Света", age: 20 }
+let dasha = { name: "Даша", age: 19 }
+
+var book2 = new Book2()
+console.log("№3")
+console.log(isEmpty(book1))
+console.log(isEmpty(book2))
+console.log("№1")
+for(i in book1) console.log(i)
+for(i in book2) console.log(i)
+console.log("№2")
+console.log(book1.show())
+console.log(book2.show())
+console.log("№4")
+console.log(obj.addClass('open'))
+console.log(obj.removeClass("open"))
+console.log("№5")
+let people = [ dima , sveta , dasha ]
+people.sort((a, b) => a.age - b.age)
+console.log(people)
+console.log("№6")
+console.log(getSecondsToday())
+console.log("№7")
+console.log(formatDate(new Date()))
+</script>
+</body>
+</html>
