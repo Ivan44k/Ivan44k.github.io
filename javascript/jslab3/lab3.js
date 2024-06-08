@@ -1,7 +1,6 @@
-import { fib } from "./lab3_1.js";
+import { fib } from "./lab3f.js";
 
 /**
- * Считаем десятичную часть числа 
  * @param {number} num 
  * @returns {number}
  */
@@ -11,9 +10,8 @@ export function getDecimal(num){
 
 
 /**
- * Нормализируем URL
- * @param {string} url в виде 'address' или 'http://address' или 'https://address'
- * @returns {string} 'https://address'
+ * @param {string} url 
+ * @returns {string} 
  */
 export function normalizeUrl(url){
     const f = /http:\/\/|https:\/\//.test(url)
@@ -23,7 +21,7 @@ export function normalizeUrl(url){
 
 
 /**
- * проверяет, содержит ли строка 'viagra' или 'XXX'
+
  * @param {string} str 
  * @returns {boolean}
  */
@@ -34,7 +32,7 @@ export function checkSpam(str){
 
 
 /**
- * если строка не помещается в макс длину, обрезаем ее и добавляем  … in the end
+
  * @param {string} str 
  * @param {number} maxlength 
  * @returns {string}
@@ -47,7 +45,7 @@ export function truncate(str, maxlength){
 
 
 /**
- * удаляет символ '-' из строки и возвращает ее в виде стандартного имени 
+
  * @param {string} str 
  * @returns {string} 
  */
@@ -58,9 +56,9 @@ export function camelize(str){
     return newStr
 }
 /**
- * возвращает список из первых n чисел фибоначчи
+
  * @param {number} n 
- * @returns {bigint[]} - массив чисел фибоначчи
+ * @returns {bigint[]} 
  */
 export function fibs(n){
     let l = []
@@ -69,7 +67,6 @@ export function fibs(n){
 }
 
 /**
- * сортирует и переворачивает заданый массив 
  * @param {number[]} arr 
  * @returns {number[]}
  */
@@ -82,7 +79,7 @@ export function arrReverseSorted(arr){
 
 
 /**
- * удаляет дубликаты из массива
+
  * @param {any[]} arr 
  * @returns {any[]}
  */

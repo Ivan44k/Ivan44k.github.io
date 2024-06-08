@@ -1,5 +1,5 @@
 /**
- * counts x to the power of n
+
  * @param {number} x
  * @param {number} n
  * @returns {number}
@@ -8,7 +8,7 @@ function pow(x, n){return x**n}
 
 
 /**
- * counts sum of numbers up to n
+
  * @param {number} n 
  * @returns {number}
  */
@@ -20,7 +20,7 @@ function sumTo(n){
 
 
 /**
- * checks if the year is leap
+
  * @param {number} year
  * @returns {boolean}
  */
@@ -28,7 +28,7 @@ function isLeapYear(year){return year % 400 == 0 || (year % 4 == 0 && year % 100
 
 
 /**
- * counts n factorial
+
  * @param {number} n 
  * @returns {bigint}
  */
@@ -40,7 +40,7 @@ function factorial(n){
 
 
 /**
- * counts nth fib number
+
  * @param {number} n 
  * @returns {bigint}
  */
@@ -57,8 +57,7 @@ function fib(n){
 }
 
 /**
- * checks if y is more than x
- * if equal returns null
+
  * @param {number} x
  * @param {number} y
  * @returns
@@ -67,7 +66,7 @@ function compare(x){return function(y){return y==x ? null : y>x}}
 
 
 /**
- * conts sum of given numbers
+
  * @param  {...number} args 
  * @returns {number}
  */
@@ -77,8 +76,8 @@ function sum(...args){
     return s
 }
 /**
-* @param {object} obj объект, к которому нужно добавить свойство
-* @return Исходный объект с добавленным свойством "blackSpot"
+* @param {object} obj 
+* @return 
 */
 function addBlackSpot(obj) {
     if (typeof obj !== 'object' || obj === null) {
