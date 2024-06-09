@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор музыкального жанра</title>
+</head>
+<body>
+    <select id="genre">
+        <option value="Rock">рок</option>
+        <option value="Blues">блюз</option>
+        <option value="Classic" selected>классика</option>
+    </select>
+    <div id="selected_info">
+        <p>Выбранное значение: <span id="selected-value"></span></p>
+        <p>Выбранный текст: <span id="selected-text"></span></p>
+    </div>
+    <script>
+        'use strict';
+        const selectElement = document.getElementById('genre');
+        const selectedValueElement = document.getElementById('selected-value');
+        const selectedTextElement = document.getElementById('selected-text');
+        function updateSelectedInfo() {
+            const selectedOption = selectElement.options[selectElement.selectedIndex];
+            selectedValueElement.textContent = selectedOption.value;
+            selectedTextElement.textContent = selectedOption.text;
+        }
+        updateSelectedInfo();
+        selectElement.addEventListener('change', updateSelectedInfo);
+    </script>
+
+</body>
+
+</html>
